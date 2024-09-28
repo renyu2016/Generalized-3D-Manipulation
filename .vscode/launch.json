@@ -1,0 +1,41 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: gen_expert",
+            "type": "python",
+            "request": "launch",
+            "program": "GDP3/gen_demonstration_expert.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "/data/ubuntu_data/miniconda3/envs/dp3/bin/python",
+            "args": ["--env_name=soccer", "--num_episodes", "2"],
+            "cwd":"${workspaceFolder}"
+        },
+        {
+            "name": "Python: check_data",
+            "type": "python",
+            "request": "launch",
+            "program": "/data/ubuntu_data/Code/Robot_Diffusion/3D-Diffusion-Policy/3D-Diffusion-Policy/data/check_data.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "/data/ubuntu_data/miniconda3/envs/SAM/bin/python",
+            "args": ["--env_name=soccer", "--num_episodes", "10", "--root_dir", "../../3D-Diffusion-Policy/data/"]
+        },
+        {
+            "name": "Python: train_dp3",
+            "type": "python",
+            "request": "launch",
+            "program": "GDP3/train.py",
+            "console": "integratedTerminal",
+            "python": "/data/ubuntu_data/miniconda3/envs/dp3/bin/python",
+            "args": ["--config-name=dp3.yaml", "task=metaworld_soccer", "hydra.run.dir='data/outputs/soccer_debug'", "training.debug=False", "training.seed=0", "training.device='cuda:0'", "exp_name=standpcd_nograph", "logging.mode=online", "checkpoint.save_ckpt=True"],
+            "env": {"HYDRA_FULL_ERROR":"1", "CUDA_VISIBLE_DEVICES":"0"},
+            "cwd": "${workspaceFolder}/3D-Diffusion-Policy"
+        }
+       
+    ]
+}

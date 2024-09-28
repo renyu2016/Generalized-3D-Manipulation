@@ -1,0 +1,13 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/data/ubuntu_data/Code/Robot_Diffusion/3D-Diffusion-Policy/3D-Diffusion-Policy",
+        "/data/ubuntu_data/Code/Robot_Diffusion/3D-Diffusion-Policy/third_party"
+    ],
+    "python.analysis.extraPaths": [
+        "/data/ubuntu_data/Code/Robot_Diffusion/3D-Diffusion-Policy/3D-Diffusion-Policy",
+        "/data/ubuntu_data/Code/Robot_Diffusion/3D-Diffusion-Policy/third_party"
+    ],
+    "files.associations": {
+        "sstream": "cpp",
+    },
+}
