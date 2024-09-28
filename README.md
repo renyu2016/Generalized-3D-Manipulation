@@ -9,6 +9,30 @@ the spatial knowledge embedded in expert demonstrations. We validate our framewo
 
 See [INSTALL.md](INSTALL.md) for installation instructions. 
 
+# Download Weights
+
+Some pre-trained weights are needed for framework running. Thanks to the advance improvement on founditional model, we can directly use the pre-trained weights.
+
+1.download the pre-trained weights for segment anything1 
+
+
+- **`default` or `vit_h`: [ViT-H SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)**
+- `vit_l`: [ViT-L SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth)
+- `vit_b`: [ViT-B SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)
+
+
+and put them under the floder:
+`GDP3/SAM/pre_weights/`
+
+
+2..download the pre-trained weights for Cutie：
+
+- `weight1`: [cutie model 1](https://github.com/hkchengrex/Cutie/releases/download/v1.0/coco_lvis_h18_itermask.pth)
+
+- `weight2`: [cutie model 2](https://github.com/hkchengrex/Cutie/releases/download/v1.0/cutie-base-mega.pth)
+
+and put them under the floder:
+`GDP3/Cutie/weights/`
 
 # 📚 Data
 You could generate demonstrations by yourself using our provided expert policies.  Generated demonstrations are under `$YOUR_REPO_PATH/data/`.
@@ -26,6 +50,11 @@ For more detailed arguments, please refer to the scripts and the code. We here p
     ```
     This will generate 10 demonstrations for the `soccer` task in Metaworld environment. The data will be saved in `data/` folder automatically.
 
+    After code start running, a interactive segmentation window will appear, and the segmentation on the first frame is indeed. click the left mouse for add task relevent target, and click right to remove the background if necessary. knock `space` on keyboard to finish one object and input `a` for finish segmentation.
+
+
+
+
 2. Train and evaluate a policy with behavior cloning. For example:
     ```bash
     bash scripts/train_policy.sh gdp3 metaworld_soccer 0112 0 0
@@ -37,4 +66,28 @@ For more detailed arguments, please refer to the scripts and the code. We here p
     bash scripts/eval_policy.sh gdp3 metaworld_soccer 0112 0 0
     ```
     This will evaluate the saved policy that just trained. 
+
+
+
+## Results
+
+All result were tested on a single NVIDIA GeForce RTX 4090.
+
+### 1. Simulation Result(Metaworld)
+
+
+| Method\Task | Dial Turn | Disassemble | Coffee Pull | Soccer | Sweep Into | Hand Insert |
+|:------------------:|:--------:|:-----:|:-----:|:-----:|:----------:|:-----------:|
+| DP3 | 66.5 | 69.7 | 87.4 | 18.7 | 38.1 | 25.6 |
+| Ours | 100.0 | 100.0 | 100.0 | 92.4 | 100.0 | 100.0 |
+
+| Method\Task | Pick Place | Push | Shelf Place| Stick Pull | Pick Place Wall | Hand Insert |
+|:------------------:|:--------:|:-----:|:-----:|:-----:|:----------:|:-----------:|
+| DP3 | 56.1 | 51.3 | 48.6 | 27.6 | 45.6 | 48.7 |
+| Ours | 100.0 | 95.6 | 95.4 | 89.8 | 100.0 | 100.0 |
+
+More results will be update as soon as possible
+
+
+
 
