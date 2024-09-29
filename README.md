@@ -81,9 +81,9 @@ All result were tested on a single NVIDIA GeForce RTX 4090.
 | DP3 | 66.5 | 69.7 | 87.4 | 18.7 | 38.1 | 25.6 |
 | Ours | 100.0 | 100.0 | 100.0 | 92.4 | 100.0 | 100.0 |
 
-| Method\Task | Pick Place | Push | Shelf Place| Stick Pull | Pick Place Wall | Hand Insert |
+| Method\Task | Pick Place | Push | Shelf Place| Stick Pull | Pick Place Wall | Button Press |
 |:------------------:|:--------:|:-----:|:-----:|:-----:|:----------:|:-----------:|
-| DP3 | 56.1 | 51.3 | 48.6 | 27.6 | 45.6 | 48.7 |
+| DP3 | 56.1 | 51.3 | 48.6 | 27.6 | 45.6 | 100.0 |
 | Ours | 100.0 | 95.6 | 95.4 | 89.8 | 100.0 | 100.0 |
 
 More results will be update as soon as possible
@@ -91,3 +91,7 @@ More results will be update as soon as possible
 
 
 
+# Acknowledgement
+Our code is generally built upon: [DP3](https://github.com/YanjieZe/3D-Diffusion-Policy), [Diffusion Policy](https://github.com/real-stanford/diffusion_policy), [DexMV](https://github.com/yzqin/dexmv-sim), [DexArt](https://github.com/Kami-code/dexart-release), [VRL3](https://github.com/microsoft/VRL3), [DAPG](https://github.com/aravindr93/hand_dapg), [DexDeform](https://github.com/sizhe-li/DexDeform), [RL3D](https://github.com/YanjieZe/rl3d), [GNFactor](https://github.com/YanjieZe/GNFactor), [H-InDex](https://github.com/YanjieZe/H-InDex), [MetaWorld](https://github.com/Farama-Foundation/Metaworld), [BEE](https://jity16.github.io/BEE/), [Bi-DexHands](https://github.com/PKU-MARL/DexterousHands), [HORA](https://github.com/HaozhiQi/hora). We thank all these authors for their nicely open sourced code and their great contributions to the community.
+
+Contact [Yu Ren](renyu@sia.cn) if you have any questions or suggestions.
