@@ -85,6 +85,34 @@ All result were tested on a single NVIDIA GeForce RTX 4090.
 |:------------------:|:--------:|:-----:|:-----:|:-----:|:----------:|:-----------:|
 | DP3 | 56.1 | 51.3 | 48.6 | 27.6 | 45.6 | 100.0 |
 | Ours | 100.0 | 95.6 | 95.4 | 89.8 | 100.0 | 100.0 |
+<!-- ################################################################## -->
+| Method\Task | Button Press | Button Press Topdown | Button Press Wall | Door Close | Coffee Push | Assembly  |
+| :---------: | :----------: | :------------------: | :---------------: | :--------: | :---------: | :-------: |
+|     DP3     |  100.0   |      100.0       |     99.0      | 100.0  |  94.0   | 99.0  |
+|    Ours     |  100.0   |      100.0       |     100.0     |   ？？？   | 100.0  | 100.0 |
+
+
+| Method\Task | Basketball | Bin Picking | Box Close | Door Lock | Drawer Close | Faucet Close |
+| :---------: | :--------: | :---------: | :-------: | :-------: | :----------: | :----------: |
+|     DP3     | 98.2 | 34.3 | 42.3  | 100.0 |  100.0   |  100.0   |
+|    Ours     | 100.0  |     ???     |    55.0     | 100.0 |  100.0   |  100.0  |
+
+| Method\Task | Faucet Open |  Hammer  | Handle Press | Handle Press Side | Handle Pull | Handle Pull Side |
+| :---------: | :---------: | :------: | :----------: | :---------------: | :---------: | :--------------: |
+|     DP3     |  100.0  | 76.4 |  100.0   |     100.0     |  53.11  |     85.3     |
+|    Ours     |  100.0  |   ???    |  100.0   |     92.3      |  100.0  |     56.2     |
+
+
+
+| Method\Task | Plate Slide Side | Plate Slide | Push Wall | Reach Wall | Stick Push |  Sweep   |
+| :---------: | :--------------: | :---------: | :-------: | :--------: | :--------: | :------: |
+|     DP3     |    100.0     |  100.0  | 49.8  |  68.3  |  97.4  | 96.3 |
+|    Ours     |    100.0     |  100.0  | 100.0 |     ??     |     ???      |    ??    |
+
+| Method\Task | Window Open | Window Close | Drawer Open | Push Back    |
+| :---------: | :---------: | :----------: | :---------- | ------------ |
+|     DP3     |  100.0  |  100.0   | 100.0   | 0            |
+|    Ours     |  100.0  |  100.0   | ?？？       | 数据采集失败 |
 
 More results will be update as soon as possible
 
