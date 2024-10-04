@@ -57,13 +57,13 @@ For more detailed arguments, please refer to the scripts and the code. We here p
 
 2. Train and evaluate a policy with behavior cloning. For example:
     ```bash
-    bash scripts/train_policy.sh gdp3 metaworld_soccer 0112 0 0
+    bash GDP3/train_policy.sh gdp3 metaworld_soccer 0112 0 0
     ```
     This will train framework on the `soccer` task in Metaworld environment using point cloud modality. By default we **save** the ckpt (optional in the script).
 
 3. Evaluate a saved policy or use it for inference. For example:
     ```bash
-    bash scripts/eval_policy.sh gdp3 metaworld_soccer 0112 0 0
+    bash GDP3/eval_policy.sh gdp3 metaworld_soccer 0112 0 0
     ```
     This will evaluate the saved policy that just trained. 
 

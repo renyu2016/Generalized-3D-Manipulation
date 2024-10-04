@@ -1,6 +1,6 @@
 # use the same command as training except the script
 # for example:
-# bash eval_policy.sh dp3 adroit_hammer 0322 0 0
+# bash GDP3/eval_policy.sh dp3 metaworld_soccer 0322 0 0
 
 
 

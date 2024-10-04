@@ -57,7 +57,7 @@ and then install mujoco-py (in the folder of `third_party`):
     cd third_party
     cd gym-0.21.0 && pip install -e . && cd ..
     cd Metaworld && pip install -e . && cd ..
-    cd rrl-dependencies && pip install -e mj_envs/. && pip install -e mjrl/. && cd ..
+    cd rrl-dependencies && pip install -e mj_envs/. && pip install -e mjrl/. 
 ---
 
 5.install pytorch3d (a simplified version)
@@ -66,17 +66,22 @@ and then install mujoco-py (in the folder of `third_party`):
 
 ---
 6.install some necessary packages
+
     pip install zarr==2.12.0 wandb ipdb gpustat dm_control omegaconf hydra-core==1.2.0 dill==0.3.5.1 einops==0.4.1 diffusers==0.11.1 numba==0.56.4 moviepy imageio av matplotlib termcolor
 
 7.install SAM 
+
     cd `GDP3/SAM`
     pip install -e .
 
 8.install Cutie
+
     cd `GDP3/Cutie`
     pip install -e .
 
 9.For visualization, the `opencv-contrib-python==4.1.2.30` is recommanded:
+
     pip install opencv-contrib-python==4.1.2.30
+    pip install open3d
 
 
