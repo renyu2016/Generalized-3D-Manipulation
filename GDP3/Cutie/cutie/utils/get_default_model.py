@@ -8,7 +8,7 @@ import torch
 from cutie.model.cutie import CUTIE
 from cutie.inference.utils.args_utils import get_dataset_cfg
 from scripts.download_models import download_models_if_needed
-
+import os
 
 def get_default_model() -> CUTIE:
     hydra.core.global_hydra.GlobalHydra.instance().clear()
@@ -17,7 +17,8 @@ def get_default_model() -> CUTIE:
 
     # download_models_if_needed()
     with open_dict(cfg):
-        cfg['weights'] = '/data/ubuntu_data/Code/Robot_Diffusion/3D-Diffusion-Policy/third_party/Cutie/weights/cutie-base-mega.pth'
+        cwd = os.getcwd()
+        cfg['weights'] = os.path.join(cwd, 'Cutie/weights/cutie-base-mega.pth')
     get_dataset_cfg(cfg)
 
     # Load the network weights
