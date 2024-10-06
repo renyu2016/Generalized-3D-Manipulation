@@ -18,7 +18,7 @@ def get_default_model() -> CUTIE:
     # download_models_if_needed()
     with open_dict(cfg):
         cwd = os.getcwd()
-        cfg['weights'] = os.path.join(cwd, 'Cutie/weights/cutie-base-mega.pth')
+        cfg['weights'] = os.path.join(cwd, 'GDP3/Cutie/weights/cutie-base-mega.pth')
     get_dataset_cfg(cfg)
 
     # Load the network weights
