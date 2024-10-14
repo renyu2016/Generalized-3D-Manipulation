@@ -50,9 +50,9 @@ For more detailed arguments, please refer to the scripts and the code. We here p
     ```
     This will generate 10 demonstrations for the `soccer` task in Metaworld environment. The data will be saved in `data/` folder automatically.
 
-    After code start running, a interactive segmentation window will appear, and the segmentation on the first frame is indeed. click the left mouse for add task relevent target, and click right to remove the background if necessary. knock `space` on keyboard to finish one object and input `a` for finish segmentation.
+    Once the code starts running, an interactive segmentation window will appear. The first frame will be segmented. Click the left mouse button to add the target object, and right-click to remove background elements if necessary. Press the `space` key to complete segmentation for one object, and press `a` to finish the segmentation process.
 
-
+    ![Data Collection Animation](data_collection.gif)
 
 
 2. Train and evaluate a policy with behavior cloning. For example:
@@ -89,30 +89,30 @@ All result were tested on a single NVIDIA GeForce RTX 4090.
 | Method\Task | Button Press | Button Press Topdown | Button Press Wall | Door Close | Coffee Push | Assembly  |
 | :---------: | :----------: | :------------------: | :---------------: | :--------: | :---------: | :-------: |
 |     DP3     |  100.0   |      100.0       |     99.0      | 100.0  |  94.0   | 99.0  |
-|    Ours     |  100.0   |      100.0       |     100.0     |   ？？？   | 100.0  | 100.0 |
+|    Ours     |  100.0   |      100.0       |     100.0     |  100.0   | 100.0  | 100.0 |
 
 
 | Method\Task | Basketball | Bin Picking | Box Close | Door Lock | Drawer Close | Faucet Close |
 | :---------: | :--------: | :---------: | :-------: | :-------: | :----------: | :----------: |
 |     DP3     | 98.2 | 34.3 | 42.3  | 100.0 |  100.0   |  100.0   |
-|    Ours     | 100.0  |     ???     |    55.0     | 100.0 |  100.0   |  100.0  |
+|    Ours     | 100.0  |     45.5     |    55.0     | 100.0 |  100.0   |  100.0  |
 
 | Method\Task | Faucet Open |  Hammer  | Handle Press | Handle Press Side | Handle Pull | Handle Pull Side |
 | :---------: | :---------: | :------: | :----------: | :---------------: | :---------: | :--------------: |
 |     DP3     |  100.0  | 76.4 |  100.0   |     100.0     |  53.11  |     85.3     |
-|    Ours     |  100.0  |   ???    |  100.0   |     92.3      |  100.0  |     56.2     |
+|    Ours     |  100.0  |   85.3    |  100.0   |     92.3      |  100.0  |     56.2     |
 
 
 
 | Method\Task | Plate Slide Side | Plate Slide | Push Wall | Reach Wall | Stick Push |  Sweep   |
 | :---------: | :--------------: | :---------: | :-------: | :--------: | :--------: | :------: |
 |     DP3     |    100.0     |  100.0  | 49.8  |  68.3  |  97.4  | 96.3 |
-|    Ours     |    100.0     |  100.0  | 100.0 |     ??     |     ???      |    ??    |
+|    Ours     |    100.0     |  100.0  | 100.0 |     80.3     |     97.0      |    97.0    |
 
 | Method\Task | Window Open | Window Close | Drawer Open | Push Back    |
 | :---------: | :---------: | :----------: | :---------- | ------------ |
 |     DP3     |  100.0  |  100.0   | 100.0   | 0            |
-|    Ours     |  100.0  |  100.0   | ?？？       | 数据采集失败 |
+|    Ours     |  100.0  |  100.0   | 100.0       | 0 |
 
 More results will be update as soon as possible
 
