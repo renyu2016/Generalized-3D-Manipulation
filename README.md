@@ -114,9 +114,10 @@ All result were tested on a single NVIDIA GeForce RTX 4090.
 |     DP3     |  100.0  |  100.0   | 100.0   | 0            |
 |    Ours     |  100.0  |  100.0   | 100.0       | 0 |
 
-More results will be update as soon as possible
+### 2. Real-world Experiments
 
-![image]([https://github.com/ZhengYaWei1992/ZWProgressView/blob/master/Untitled3.gif](https://github.com/renyu2016/Generalized-3D-Manipulation/blob/main/gif.gif))
+![image](https://github.com/renyu2016/Generalized-3D-Manipulation/blob/main/gif.gif)
+
 
 
 # Acknowledgement
