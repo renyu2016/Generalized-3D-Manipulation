@@ -116,7 +116,7 @@ All result were tested on a single NVIDIA GeForce RTX 4090.
 
 More results will be update as soon as possible
 
-
+![image]([https://github.com/ZhengYaWei1992/ZWProgressView/blob/master/Untitled3.gif](https://github.com/renyu2016/Generalized-3D-Manipulation/blob/main/gif.gif))
 
 
 # Acknowledgement
